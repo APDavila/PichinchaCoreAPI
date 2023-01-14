@@ -10,7 +10,7 @@ namespace PichinchaCoreAPI
         }
 
         public DbSet<Persona> Personas { get; set; }
-        public DbSet<Persona> Persona2s { get; set; }
+        
 
 
     }
