@@ -10,7 +10,10 @@ namespace PichinchaCoreAPI
         }
 
         public DbSet<Persona> Personas { get; set; }
-        
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Movimientos> Movimientos { get; set; }
+        public DbSet<Cuenta> Cuentas{ get; set; }
+
 
 
     }
