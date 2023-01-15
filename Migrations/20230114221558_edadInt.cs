@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PichinchaCoreAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class Creacion : Migration
+    public partial class edadInt : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,9 +17,9 @@ namespace PichinchaCoreAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Genero = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Edad = table.Column<string>(type: "nvarchar(2)", maxLength: 2, nullable: false),
+                    Edad = table.Column<int>(type: "int", nullable: false),
                     Identificacion = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Telefono = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
@@ -60,6 +60,7 @@ namespace PichinchaCoreAPI.Migrations
                     NumeroCuenta = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     TipoCuenta = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     SaldoInicial = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    CupoDiario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Activo = table.Column<bool>(type: "bit", nullable: false),
                     ClienteId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -80,7 +81,7 @@ namespace PichinchaCoreAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Fecha = table.Column<DateTime>(type: "Date", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "DateTime", nullable: false),
                     TipoMovimiento = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Saldo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),

@@ -12,8 +12,8 @@ using PichinchaCoreAPI;
 namespace PichinchaCoreAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230114202000_Creacion")]
-    partial class Creacion
+    [Migration("20230114221558_edadInt")]
+    partial class edadInt
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,6 +66,9 @@ namespace PichinchaCoreAPI.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("CupoDiario")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.Property<string>("NumeroCuenta")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -98,7 +101,7 @@ namespace PichinchaCoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("Date");
+                        .HasColumnType("DateTime");
 
                     b.Property<decimal>("Saldo")
                         .HasColumnType("decimal(18, 2)");
@@ -134,10 +137,8 @@ namespace PichinchaCoreAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Edad")
-                        .IsRequired()
-                        .HasMaxLength(2)
-                        .HasColumnType("nvarchar(2)");
+                    b.Property<int>("Edad")
+                        .HasColumnType("int");
 
                     b.Property<string>("Genero")
                         .IsRequired()
@@ -151,8 +152,8 @@ namespace PichinchaCoreAPI.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()

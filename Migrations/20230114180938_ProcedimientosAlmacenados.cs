@@ -44,9 +44,9 @@ namespace PichinchaCoreAPI.Migrations
              migrationBuilder.Sql(@"
                    CREATE PROCEDURE dbo.PersonasObtenerIds                   
                    AS
-                   BEGIN
-                   
+                   BEGIN                   
                    SELECT Id
+
                    FROM Personas                   
                    END
              ");
@@ -56,7 +56,9 @@ namespace PichinchaCoreAPI.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.Sql("DROP PROCEDURE dbo.PersonasInsertar");
+            migrationBuilder.Sql("DROP PROCEDURE dbo.PersonasObtenerPorId");
+            migrationBuilder.Sql("DROP PROCEDURE dbo.PersonasObtenerIds");
         }
     }
 }

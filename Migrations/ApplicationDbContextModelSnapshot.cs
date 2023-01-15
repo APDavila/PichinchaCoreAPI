@@ -63,6 +63,9 @@ namespace PichinchaCoreAPI.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("CupoDiario")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.Property<string>("NumeroCuenta")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -131,10 +134,8 @@ namespace PichinchaCoreAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Edad")
-                        .IsRequired()
-                        .HasMaxLength(2)
-                        .HasColumnType("nvarchar(2)");
+                    b.Property<int>("Edad")
+                        .HasColumnType("int");
 
                     b.Property<string>("Genero")
                         .IsRequired()
@@ -148,8 +149,8 @@ namespace PichinchaCoreAPI.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()

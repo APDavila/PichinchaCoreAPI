@@ -18,24 +18,65 @@ namespace PichinchaCoreAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<int>> Post(Persona persona)
+        public async Task<ActionResult> PostAsync(Persona persona)
         {
-            var parametroId = new SqlParameter("@id", SqlDbType.Int);
-            parametroId.Direction = ParameterDirection.Output;
+            try
+            {                           
+                context.Personas.Add(persona);
+                await context.SaveChangesAsync();
+                return Created($"/getPersonaById?id={persona.Id}", persona);
+                //return Ok("Persona insertada con éxito");
+            }catch(Exception err)
+            {
+                return NotFound("Problemas en la inserción");
+            }                                                                
+        }
 
-            await context.Database
-                .ExecuteSqlInterpolatedAsync($@"
-                                EXEC PersonasInsertar
-                                @id={parametroId} OUTPUT,  
-                                @nombre={persona.Nombre},
-                                @genero={persona.Genero},
-                                @edad={persona.Edad},
-                                @identificacion={persona.Identificacion},
-                                @direccion={persona.Direccion},
-                                @telefono={persona.Telefono},
-                                @activo={persona.Activo}");
-            var id = (int)parametroId.Value;
-            return Ok(id);
+        [HttpDelete]
+        public async Task<ActionResult> Delete(int personaId)
+        {
+            try
+            {
+                var persona = new Persona { Id = personaId };
+                context.Personas.Attach(persona);
+                context.Personas.Remove(persona);
+                context.SaveChanges();
+                return Ok("Persona eliminada exitosamente");
+            }
+            catch (Exception err)
+            {
+                return NotFound("Problemas en la elminación"+err.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Get()
+        {
+            try
+            {
+                var personas = await context.Personas.ToListAsync();
+                return Ok(personas);
+            }
+            catch (Exception err)
+            {
+                return NotFound("Problemas en la elminación" + err.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("getPersonaById")]
+        public async Task<IActionResult> GetPersonByIdAsync(int id)
+        {
+            var persona = await context.Personas.FindAsync(id);
+            return Ok(persona);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> PutAsync(Persona personaToUpdate)
+        {
+            context.Personas.Update(personaToUpdate);
+            await context.SaveChangesAsync();
+            return Ok("Registro actualizado con éxito");
         }
     }
 }

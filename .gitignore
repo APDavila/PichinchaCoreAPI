@@ -2,3 +2,12 @@
 .vs/PichinchaCoreAPI/DesignTimeBuild/.dtbcache.v2
 .vs/PichinchaCoreAPI/v17/.futdcache.v1
 .vs/PichinchaCoreAPI/v17/.suo
+.vs/PichinchaCoreAPI/v17/.suo
+bin/Debug/net6.0/PichinchaCoreAPI.dll
+bin/Debug/net6.0/PichinchaCoreAPI.pdb
+bin/Debug/net6.0/ref/PichinchaCoreAPI.dll
+obj/staticwebassets.pack.sentinel
+obj/Debug/net6.0/PichinchaCoreAPI.csproj.CoreCompileInputs.cache
+obj/Debug/net6.0/PichinchaCoreAPI.dll
+obj/Debug/net6.0/PichinchaCoreAPI.pdb
+obj/Debug/net6.0/ref/PichinchaCoreAPI.dll
