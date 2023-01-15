@@ -36,7 +36,7 @@ namespace PichinchaCoreAPI.Controllers
                                   join Cuenta in context.Cuentas on Movimientos.CuentaId equals Cuenta.Id
                                   join Cliente in context.Clientes on Cuenta.ClienteId equals Cliente.Id
                                   join Persona in context.Personas on Cliente.PersonaId equals Persona.Id
-                                  where Cliente.Id == clienteId && Movimientos.Fecha > fechaInicio && Movimientos.Fecha < fechafin
+                                  where Cliente.Id == clienteId && Movimientos.Fecha >= fechaInicio && Movimientos.Fecha <= fechafin
                                   select new{ Movimientos.Fecha, Persona.Nombre, Cuenta.NumeroCuenta, Cuenta.TipoCuenta
                                                 ,Cuenta.SaldoInicial, Cuenta.Activo, Movimientos.TipoMovimiento, Movimientos.Valor, Movimientos.Saldo};
 

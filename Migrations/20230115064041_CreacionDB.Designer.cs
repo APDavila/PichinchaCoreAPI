@@ -12,8 +12,8 @@ using PichinchaCoreAPI;
 namespace PichinchaCoreAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230114221558_edadInt")]
-    partial class edadInt
+    [Migration("20230115064041_CreacionDB")]
+    partial class CreacionDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

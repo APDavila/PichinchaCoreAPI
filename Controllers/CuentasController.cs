@@ -80,7 +80,7 @@ namespace PichinchaCoreAPI.Controllers
         public async Task<bool> VerificaSaldoDisponible(int cuentaId, double saldoADebitar)
         {
             Cuenta cuenta = (Cuenta) await GetCuentaByIdAsync(cuentaId);
-            return cuenta.SaldoInicial > saldoADebitar ? true : false;
+            return cuenta.SaldoInicial >= saldoADebitar ? true : false;
         }
 
         [HttpGet]

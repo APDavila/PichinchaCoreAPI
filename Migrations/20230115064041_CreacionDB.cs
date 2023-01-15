@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PichinchaCoreAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class edadInt : Migration
+    public partial class CreacionDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
