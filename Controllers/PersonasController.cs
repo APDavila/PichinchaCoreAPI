@@ -13,7 +13,7 @@ namespace PichinchaCoreAPI.Controllers
         private readonly ApplicationDbContext context;
 
         public PersonasController(ApplicationDbContext context)
-        {
+        {            
             this.context = context;
         }
 

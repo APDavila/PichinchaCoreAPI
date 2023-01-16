@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "930bd2bf-a58a-4193-94da-a5a71c8d4e61",
+		"name": "Pichincha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18928874"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "PostPersona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"nombre\": \"Juan Osorio\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 32,\r\n  \"identificacion\": \"1719633822\",\r\n  \"direccion\": \"13 junio y Equinoccial\",\r\n  \"telefono\": \"098874587\",\r\n  \"activo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePersona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas?personaId=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "personaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPersonas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPersonaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas/getPersonaById?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas",
+								"getPersonaById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPersona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nombre\": \"Paul\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 27,\r\n  \"identificacion\": \"171963382-6\",\r\n  \"direccion\": \"La mariscal\",\r\n  \"telefono\": \"0999910156\",\r\n  \"activo\": true  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "PostMovimientos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"nombre\": \"Andres\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 21,\r\n  \"identificacion\": \"string\",\r\n  \"direccion\": \"string\",\r\n  \"telefono\": \"string\",\r\n  \"activo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovimientos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas?personaId=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "personaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovimientoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas/getPersonaById?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas",
+								"getPersonaById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutMovimientos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nombre\": \"Paul\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 27,\r\n  \"identificacion\": \"171963382-6\",\r\n  \"direccion\": \"La mariscal\",\r\n  \"telefono\": \"0999910156\",\r\n  \"activo\": true  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "PostCuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"numeroCuenta\": \"17196338261\",\r\n  \"tipoCuenta\": \"ahorros\",\r\n  \"saldoInicial\": 2500,\r\n  \"cupoDiario\": 0,\r\n  \"activo\": true,\r\n  \"clienteId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCuentas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas?personaId=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "personaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCuentas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nombre\": \"Paul\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 27,\r\n  \"identificacion\": \"171963382-6\",\r\n  \"direccion\": \"La mariscal\",\r\n  \"telefono\": \"0999910156\",\r\n  \"activo\": true  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "PostClientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n  \"contrasenia\": \"1245\",\r\n  \"activo\": true,\r\n  \"personaId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClientes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas?personaId=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "personaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/personas/getPersonaById?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas",
+								"getPersonaById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutClientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nombre\": \"Paul\",\r\n  \"genero\": \"masculino\",\r\n  \"edad\": 27,\r\n  \"identificacion\": \"171963382-6\",\r\n  \"direccion\": \"La mariscal\",\r\n  \"telefono\": \"0999910156\",\r\n  \"activo\": true  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7172/api/personas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "GetReportes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7172/api/reportes?clienteId=2&fechaInicio=2023-01-15&fechafin=2023-01-16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7172",
+							"path": [
+								"api",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "2"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2023-01-15"
+								},
+								{
+									"key": "fechafin",
+									"value": "2023-01-16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

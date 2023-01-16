@@ -31,7 +31,7 @@ namespace PichinchaCoreAPI.Controllers
                     Join(context.Clientes, Movimiento => Movimiento.Cuenta.ClienteId, Cliente => Cliente.Id,
                      (Movimiento, Cliente) => new { Movimiento.Movimiento, Movimiento.Cuenta, Cliente }).ToListAsync();
                 */
-
+                
                 var movimientos = from Movimientos in context.Movimientos
                                   join Cuenta in context.Cuentas on Movimientos.CuentaId equals Cuenta.Id
                                   join Cliente in context.Clientes on Cuenta.ClienteId equals Cliente.Id
